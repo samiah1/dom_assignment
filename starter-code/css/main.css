@@ -1,0 +1,103 @@
+html, body, .analogue_clock{
+    height: 100%;
+}
+
+.analogue_clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.clock {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-image: url("/Users/samiah/Documents/dom/dom_assignment/starter-code/img/clock_face.jpg");
+}
+
+.clock:after {
+    position: absolute;
+    content: '';
+    background: #000;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+
+}
+
+.hands {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+}
+
+.button {
+    position: fixed;
+    top: 40%;
+    right: 80%;
+    background-color: rgb(16, 58, 17);
+    border: none;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .button:after {
+    content: "";
+    background: rgb(61, 100, 61);
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -30px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+  
+  .dClock {
+    position: absolute;
+    top: 20%;
+    right: 63%;
+    transform: translateX(-50%) translateY(-50%);
+    color: rgb(211, 9, 26);
+    font-size: 40px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+
+
+}
+
+.kClock {
+    position: absolute;
+    top: 20%;
+    right: 63%;
+    transform: translateX(-50%) translateY(-50%);
+    color: rgb(28, 57, 187);
+    font-size: 40px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+
+
+}
